@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #map {
+        height: 1080px;
+        width: 100%;
+        
+        
+       }
+    </style>
+       <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
+  <body>
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+  
+  
+  
+
+    <div id="map"></div>
+    <script>
+
+
+    window.onload = function () {
+       
+       document.addEventListener('keydown', function(e) {
+        	switch(e.keyCode){
+        	      	
+        		
+        	case TvKeyCode.KEY_BACK: 
+        		document.location.href="accueil.html";
+        		break;
+        	default:
+        		console.log("Key code : " + e.keyCode);
+        		break;
+        		
+        	}
+        });
+            
+    };
+
+
+    
+      function initMap() {
+        var uluru = {lat: 33.8869,lng: 11.5375};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 7,
+          center: uluru
+        });
+    
+        var mBaseRef = firebase.database().ref().child("musee");
+    	
+    	mBaseRef.on('value', function(datasnapshot){
+    		datasnapshot.forEach(function(childSnapshot) {
+    			 
+
+    					var childData= childSnapshot.val();
+    		         
+    			console.log(childData.longitude);
+    			var uluruu={lat: childData.lattitude,lng: childData.longitude};
+    			var marker = new google.maps.Marker({
+    				 
+        			 position: uluruu,
+        		          map: map
+        	    		
+        		});
+    		});
+    	});
+
+
+
+
+        var mBaseRef = firebase.database().ref().child("site");
+    	
+    	mBaseRef.on('value', function(datasnapshot){
+    		datasnapshot.forEach(function(childSnapshot) {
+    			 
+
+    					var childData= childSnapshot.val();
+    		         
+    			console.log(childData.longitude);
+    			var uluruu={lat: childData.lattitude,lng: childData.longitude};
+    			var marker = new google.maps.Marker({
+    				 
+        			 position: uluruu,
+        		          map: map
+        	    		
+        		});
+    		});
+    	});
+
+
+
+
+        var mBaseRef = firebase.database().ref().child("monument");
+    	
+    	mBaseRef.on('value', function(datasnapshot){
+    		datasnapshot.forEach(function(childSnapshot) {
+    			 
+
+    					var childData= childSnapshot.val();
+    		         
+    			console.log(childData.longitude);
+    			var uluruu={lat: childData.lattitude,lng: childData.longitude};
+    			var marker = new google.maps.Marker({
+    				 
+        			 position: uluruu,
+        		          map: map
+        	    		
+        		});
+    		});
+    	});
+
+
+        var mBaseRef = firebase.database().ref().child("personnage");
+    	
+    	mBaseRef.on('value', function(datasnapshot){
+    		datasnapshot.forEach(function(childSnapshot) {
+    			 
+
+    					var childData= childSnapshot.val();
+    		         
+    			console.log(childData.longitude);
+    			var uluruu={lat: childData.lattitude,lng: childData.longitude};
+    			var marker = new google.maps.Marker({
+    				 
+        			 position: uluruu,
+        		          map: map
+        	    		
+        		});
+    		});
+    	});
+
+        
+      }
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase-messaging.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/TVKeyValue.js"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3-4voHG4Cpz_iAlNHYr-d5E1-oKm6biA&callback=initMap">
+    </script>
+  </body>
+</html>

@@ -1,0 +1,126 @@
+* {
+    padding: 0;
+	margin: 0;
+	border: 0;
+	position: fixed;
+}
+
+body {
+ 	height:100%;
+  	width:100%;
+	background-size:720px;
+	background-repeat:repeat;
+	background-position: top;
+	background-image: url("../images/backroungporte.jpg");
+}
+
+
+.main_btn{
+width:708px;
+height:108px;
+position:absolute;
+text-align:center;
+left:660px;
+    
+    font-size: 34px;
+}
+
+
+
+#myProgress {
+    position: relative;
+    background-position:center;
+    width: 100%;
+    height: 30px;
+    background-color: grey;
+}
+#myBar {
+    position: absolute;
+    width: 1%;
+    height: 100%;
+     background-position:center;
+    background-color: green;
+}
+
+
+#btn_1{
+top:200px;
+background-image: url("../images/news.jpg");
+
+
+}
+
+#btn_2{
+top:360px;
+background-image: url("../images/gallery.jpg")
+
+
+}
+
+#btn_3{
+top:520px;
+background-image: url("../images/about.jpg");
+
+
+}
+
+.selected_btn{
+border: solid 4px white;
+box-shadow: 6px 6px 20px 10px gray;
+}
+
+div.main_btn:hover{
+	border: solid 4px white;
+box-shadow: 6px 6px 20px 10px gray;
+}
+
+#help_bar1{
+width:920px;
+top:1030px;
+
+bottom:0px;
+left:0px;
+z-index:12;
+position:fixed;
+background-image:url("../images/HELPBAR1.jpg");
+}
+
+
+.newsItem{
+padding:10px;
+color:#fff;
+width:800px;
+height:100px;
+margin-bottom:10px;
+margin-left:80px;
+background-color:#388e8e;
+
+}
+
+.title{
+color:#87d2ef;
+font-size:20px;
+}
+
+.description{
+color:#fff;
+font-size:15px;
+}
+
+.img{
+width:300px;
+height:200px;
+position:absolute;
+left:50px;
+top:50px;
+}
+
+.text{
+position:absolute;
+width:500px;
+height:400px;
+left:400px;
+top:50px;
+font-size:25px;
+color:#fff;
+}

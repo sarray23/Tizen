@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8" >
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+	<script src="js/app.js"></script>
+		<script type="text/javascript" src="js/scriptexperience.js"></script>
+		
+	
+	<link type="text/css" rel="stylesheet" href="css/styleexperience.css" />
+
+</head>
+
+<body onload="sliderTimer()">
+	
+
+
+
+<input type ="button" name="Refresh" text="Refresh" onclick="<script>window.location.reload()</script>" />
+	
+	<div id="slider">
+		<div class="icon" id="left"><i class="fa fa-angle-left" onclick="prev()"></i></div>
+		<h2 id="sliderHeader"> </h2>
+		
+		<br> <br> <br>		<br> <br> <br>
+		
+				<p id="sliderdesc"> </p>
+		
+		<div class="icon" id="right"><i class="fa fa-angle-right" onclick="next()"></i></div>
+	</div>
+
+</body>
+</html>

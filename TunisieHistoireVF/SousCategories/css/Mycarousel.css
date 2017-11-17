@@ -1,0 +1,119 @@
+
+body {
+	background: #333;
+	padding: 70px 0;
+	font: 15px/20px Arial, sans-serif;
+}
+
+.descriptions {
+
+	height: 400px;
+}
+.total{
+margin-top: -200px;}
+
+
+.container {
+	
+	padding-left:25%;
+	width: 350px;
+	height: 100%;
+	margin-bottom: 10px;
+	position: relative;
+	perspective: 1000px;
+}
+
+
+.carousel {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	transform-style: preserve-3d;
+	transition: transform 1s;
+}
+
+.item {
+	display: block;
+	position: absolute;
+	background: #000;
+	width: 350px;
+	height: 200px;
+	line-height: 200px;
+	font-size: 5em;
+	text-align: center;
+	color: #FFF;
+	opacity: 0.95;
+	border-radius: 10px;
+}
+
+.a {
+	transform: rotateY(0deg) translateZ(250px);
+	background: transparent;
+}
+
+.b {
+	transform: rotateY(40deg) translateZ(250px);
+	background: transparent;
+}
+
+.c {
+	transform: rotateY(80deg) translateZ(250px);
+	background: transparent;
+}
+
+.d {
+	transform: rotateY(120deg) translateZ(250px);
+	background: transparent;
+}
+
+.e {
+	transform: rotateY(160deg) translateZ(250px);
+	background: transparent;
+}
+
+.f {
+	transform: rotateY(200deg) translateZ(250px);
+	background: transparent;
+}
+
+.g {
+	transform: rotateY(240deg) translateZ(250px);
+	background: transparent;
+}
+
+.h {
+	transform: rotateY(280deg) translateZ(250px);
+	background: transparent;
+}
+
+.img {
+	padding-left: 200px;
+}
+
+.next,.prev {
+	color: #444;
+	position: absolute;
+	padding: 1em 2em;
+	cursor: pointer;
+	background: #CCC;
+	border-radius: 5px;
+	border-top: 1px solid #FFF;
+	box-shadow: 0 5px 0 #999;
+	transition: box-shadow 0.1s, top 0.1s;
+}
+
+.next:hover,.prev:hover {
+	color: #000;
+}
+
+.next:active,.prev:active {
+	box-shadow: 0 1px 0 #999;
+}
+
+.next {
+	right: 5em;
+}
+
+.prev {
+	left: 5em;
+}

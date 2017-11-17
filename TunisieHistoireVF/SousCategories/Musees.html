@@ -1,0 +1,109 @@
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/Mycarousel.css" />
+<link rel="stylesheet" type="text/css" href="../css/style.css" />
+</head>
+<body style="background-color: white;">
+
+
+	<div class="hh">
+		<div id="header">
+			<div class="top">
+				<!-- Logo -->
+<span class="image avatar48"><img src="../images/tunisiehistoire.png"  width="250px" height="150px"/></span>
+				<!-- Nav -->
+				<nav id="nav">
+
+					<ul>
+						<li><a href="#top" style="font-size: 1.5em;" id="btn_1"
+							class="main_btn"><span class="icon fa-home">Liste
+									musées</span></a></li>
+						<li><a href="#portfolio" style="font-size: 1.5em;" id="btn_2"
+							class="main_btn"><span class="icon fa-th">Liste
+									monuments</span></a></li>
+						<li><a href="#about" style="font-size: 1.5em;" id="btn_3"
+							class="main_btn"><span class="icon fa-user"> Liste
+									personnages</span></a></li>
+						<li><a href="#contact" style="font-size: 1.5em;" id="btn_4"
+							class="main_btn"><span class="icon fa-envelope">Liste
+									sites</span></a></li>
+					</ul>
+				</nav>
+
+			</div>
+
+
+
+		</div>
+	</div>
+
+
+
+
+	<div class="container">
+		
+		<div class="descriptions" id="descriptions">
+			
+				<div class="img" id="img"></div>
+				<div class="titre" id="titre"></div>
+				<div class="description" id="description"></div>
+			
+			<div class="carousel" id="carousel"></div>
+
+		
+	</div>
+
+
+
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase-auth.js"></script>
+	<script
+		src="https://www.gstatic.com/firebasejs/3.6.1/firebase-database.js"></script>
+	<script
+		src="https://www.gstatic.com/firebasejs/3.6.1/firebase-messaging.js"></script>
+	<script src="../js/app.js"></script>
+	
+
+
+
+	<script type="text/javascript" src="js/main.js"></script>
+	<script src="../js/ListeMusees.js"></script>
+
+
+
+<script type="text/javascript" src="js/mainmusees.js"></script>
+<script type="text/javascript" src="js/TVKeyValue.js"></script>
+
+
+	<script type="text/javascript">
+		var carousel = $(".carousel"), currdeg = 0;
+
+		$(".next").on("click", {
+			d : "n"
+		}, rotate);
+		$(".prev").on("click", {
+			d : "p"
+		}, rotate);
+
+		function rotate(e) {
+			if (e.data.d == "n") {
+				currdeg = currdeg - 40;
+			}
+			if (e.data.d == "p") {
+				currdeg = currdeg + 40;
+			}
+			carousel.css({
+				"-webkit-transform" : "rotateY(" + currdeg + "deg)",
+				"-moz-transform" : "rotateY(" + currdeg + "deg)",
+				"-o-transform" : "rotateY(" + currdeg + "deg)",
+				"transform" : "rotateY(" + currdeg + "deg)"
+			});
+		}
+	</script>
+</body>
+</html>
